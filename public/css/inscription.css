@@ -1,0 +1,437 @@
+/* public/css/inscription.css */
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+.page-hero {
+  background: linear-gradient(135deg, var(--bleu-dark) 0%, var(--bleu) 60%, var(--bleu-mid) 100%);
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-title {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--blanc);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.page-hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   SECTION INSCRIPTION
+   ============================================================ */
+.section-inscription {
+  background: var(--gris-clair);
+  padding: 96px 0 112px;
+}
+
+.inscription-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 36px;
+  align-items: start;
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+.form-card {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  border: 1.5px solid rgba(27,43,107,0.06);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-card-title {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--bleu);
+  margin-bottom: 8px;
+}
+
+.form-card-subtitle {
+  font-size: 0.88rem;
+  color: var(--gris-texte);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+}
+
+.form-grid .form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--bleu);
+  letter-spacing: 0.01em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(27,43,107,0.15);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--bleu);
+  background: var(--blanc);
+  transition: var(--transition-fast);
+  outline: none;
+  appearance: none;
+}
+
+.form-control::placeholder {
+  color: rgba(74,85,104,0.45);
+  font-weight: 400;
+}
+
+.form-control:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0,174,239,0.12);
+}
+
+.form-control:hover:not(:focus) {
+  border-color: rgba(27,43,107,0.3);
+}
+
+.form-control.is-invalid {
+  border-color: var(--rouge);
+  box-shadow: 0 0 0 3px rgba(230,51,41,0.1);
+}
+
+.invalid-feedback {
+  font-size: 0.78rem;
+  color: var(--rouge);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+}
+
+select.form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B2B6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   TYPE PILLS
+   ============================================================ */
+.type-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.type-pills input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.type-pills label {
+  padding: 10px 20px;
+  border: 1.5px solid rgba(27,43,107,0.15);
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--gris-texte);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.type-pills input[type="radio"]:checked + label {
+  background: var(--bleu);
+  border-color: var(--bleu);
+  color: var(--blanc);
+  box-shadow: 0 4px 12px rgba(27,43,107,0.25);
+}
+
+.type-pills label:hover {
+  border-color: var(--bleu);
+  color: var(--bleu);
+  background: rgba(27,43,107,0.04);
+}
+
+/* ============================================================
+   CHECKBOX GROUP
+   ============================================================ */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  accent-color: var(--bleu);
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: var(--gris-texte);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.checkbox-group label a {
+  color: var(--bleu);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   ALERTS
+   ============================================================ */
+.alert-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.alert-success-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.alert-success-text {
+  font-size: 0.9rem;
+  color: #15803d;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.alert-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff1f0;
+  border: 1.5px solid #fca5a5;
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.alert-error-text {
+  font-size: 0.9rem;
+  color: #b91c1c;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.btn-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+.sidebar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: calc(var(--navbar-h) + 24px);
+}
+
+.info-card {
+  background: var(--blanc);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  border: 1.5px solid rgba(27,43,107,0.06);
+}
+
+.info-card-title {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--bleu);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gris-clair);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.info-item-label {
+  font-weight: 600;
+  color: var(--bleu);
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.info-item-val {
+  color: var(--gris-texte);
+  line-height: 1.4;
+}
+
+.info-card-dark {
+  background: var(--bleu);
+  border-color: var(--bleu);
+}
+
+.info-card-dark .info-card-title {
+  color: var(--blanc);
+  border-bottom-color: rgba(255,255,255,0.12);
+}
+
+.info-card-dark .info-item-label {
+  color: rgba(255,255,255,0.55);
+}
+
+.info-card-dark .info-item-val {
+  color: rgba(255,255,255,0.82);
+}
+
+.programme-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.programme-mini-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(27,43,107,0.05);
+  font-size: 0.82rem;
+}
+
+.info-card-dark .programme-mini-item {
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+
+.programme-mini-item:last-child {
+  border-bottom: none;
+}
+
+.mini-heure {
+  font-weight: 700;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+  min-width: 42px;
+}
+
+.mini-titre {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 960px) {
+  .inscription-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-info {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-card {
+    padding: 28px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .type-pills {
+    gap: 8px;
+  }
+
+  .type-pills label {
+    font-size: 0.82rem;
+    padding: 8px 14px;
+  }
+}

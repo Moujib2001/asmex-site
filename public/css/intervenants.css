@@ -1,0 +1,255 @@
+/* public/css/intervenants.css */
+
+/* ============================================================
+   PAGE HERO (identique aux autres pages)
+   ============================================================ */
+.page-hero {
+  background: linear-gradient(135deg, var(--bleu-dark) 0%, var(--bleu) 60%, var(--bleu-mid) 100%);
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-title {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--blanc);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.page-hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   SECTION INTERVENANTS
+   ============================================================ */
+.section-intervenants {
+  background: var(--blanc);
+  padding: 96px 0 112px;
+}
+
+/* ============================================================
+   FILTRES
+   ============================================================ */
+.speakers-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+
+.filter-tag {
+  padding: 9px 20px;
+  border: 1.5px solid rgba(27,43,107,0.15);
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gris-texte);
+  background: var(--blanc);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-tag:hover {
+  border-color: var(--bleu);
+  color: var(--bleu);
+  background: rgba(27,43,107,0.04);
+}
+
+.filter-tag.active {
+  background: var(--bleu);
+  border-color: var(--bleu);
+  color: var(--blanc);
+  box-shadow: 0 4px 12px rgba(27,43,107,0.25);
+}
+
+/* ============================================================
+   SPEAKERS GRID
+   ============================================================ */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ============================================================
+   SPEAKER CARD
+   ============================================================ */
+.speaker-card {
+  background: var(--gris-clair);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+  border: 1.5px solid transparent;
+}
+
+.speaker-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.speaker-card[data-panel="ouverture"]::before { background: var(--bleu); }
+.speaker-card[data-panel="keynote"]::before   { background: #7c3aed; }
+.speaker-card[data-panel="panel1"]::before    { background: var(--cyan); }
+.speaker-card[data-panel="panel2"]::before    { background: var(--rouge); }
+.speaker-card[data-panel="panel3"]::before    { background: #10b981; }
+.speaker-card[data-panel="usecase"]::before   { background: var(--bleu-dark); }
+
+.speaker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(27,43,107,0.08);
+}
+
+.speaker-card:hover::before {
+  transform: scaleX(1);
+}
+
+.speaker-card.hidden {
+  display: none;
+}
+
+/* ============================================================
+   CARD TOP
+   ============================================================ */
+.speaker-card-top {
+  padding: 32px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.speaker-card-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--blanc);
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+
+.avatar-bleu   { background: linear-gradient(135deg, var(--bleu) 0%, var(--bleu-mid) 100%); }
+.avatar-rouge  { background: linear-gradient(135deg, var(--rouge) 0%, #c82920 100%); }
+.avatar-cyan   { background: linear-gradient(135deg, var(--cyan) 0%, #0099d4 100%); }
+.avatar-purple { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+.avatar-green  { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+.avatar-dark   { background: linear-gradient(135deg, var(--bleu-dark) 0%, #060f30 100%); }
+
+.speaker-card-name {
+  font-family: var(--font-titre);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--bleu);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.speaker-card-title {
+  font-size: 0.8rem;
+  color: var(--gris-texte);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.speaker-card-org {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--bleu-mid);
+  opacity: 0.7;
+}
+
+/* ============================================================
+   CARD BOTTOM
+   ============================================================ */
+.speaker-card-bottom {
+  padding: 12px 24px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.speaker-panel-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.tag-ouverture { background: rgba(27,43,107,0.1);   color: var(--bleu); }
+.tag-keynote   { background: rgba(124,58,237,0.1);  color: #7c3aed; }
+.tag-panel1    { background: rgba(0,174,239,0.1);   color: var(--cyan); }
+.tag-panel2    { background: rgba(230,51,41,0.1);   color: var(--rouge); }
+.tag-panel3    { background: rgba(16,185,129,0.1);  color: #059669; }
+.tag-usecase   { background: rgba(15,28,77,0.1);    color: var(--bleu-dark); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .speakers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-filters {
+    gap: 8px;
+  }
+
+  .filter-tag {
+    font-size: 0.8rem;
+    padding: 7px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
