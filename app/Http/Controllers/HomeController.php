@@ -22,7 +22,7 @@ class HomeController extends Controller
                 'titre'   => 'L\'IA, Levier Stratégique pour l\'Export',
                 'heure'   => '10h20',
                 'couleur' => 'bleu',
-                'icon'    => '🧠',
+                'icon'    => 'intelligence-artificielle.png',
                 'desc'    => 'Comment l\'intelligence artificielle transforme les stratégies d\'exportation des entreprises marocaines.',
             ],
             [
@@ -30,7 +30,7 @@ class HomeController extends Controller
                 'titre'   => 'Prospection & Marketing à l\'Ère de l\'IA',
                 'heure'   => '11h30',
                 'couleur' => 'rouge',
-                'icon'    => '📡',
+                'icon'    => 'satellite.png',
                 'desc'    => 'Nouveaux outils IA pour la prospection B2B internationale et le marketing digital export.',
             ],
             [
@@ -38,7 +38,7 @@ class HomeController extends Controller
                 'titre'   => 'IA & Performance Logistique à l\'International',
                 'heure'   => '14h00',
                 'couleur' => 'cyan',
-                'icon'    => '🚢',
+                'icon'    => 'transportation.png',
                 'desc'    => 'Optimisation logistique, douanes intelligentes et plateformes digitales au service de l\'export.',
             ],
         ];

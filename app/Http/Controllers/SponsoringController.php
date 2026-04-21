@@ -14,7 +14,7 @@ class SponsoringController extends Controller
                 'tier'    => 'Platinum',
                 'price'   => '200 000 DH HT',
                 'theme'   => 'platinum',
-                'medal'   => '🏆',
+                'medal'   => 'Platinum.png',
                 'avantages' => [
                     'Logo en première position sur tous les supports communication',
                     'Prise de parole de 10 min lors de la plénière d\'ouverture',
@@ -32,7 +32,7 @@ class SponsoringController extends Controller
                 'tier'    => 'Gold',
                 'price'   => '160 000 DH HT',
                 'theme'   => 'gold',
-                'medal'   => '🥇',
+                'medal'   => 'gold-medal.png',
                 'avantages' => [
                     'Logo en deuxième position sur tous les supports communication',
                     'Prise de parole de 5 min lors d\'un panel',
@@ -48,7 +48,7 @@ class SponsoringController extends Controller
                 'tier'    => 'Silver',
                 'price'   => '120 000 DH HT',
                 'theme'   => 'silver',
-                'medal'   => '🥈',
+                'medal'   => 'silver-medal.png',
                 'avantages' => [
                     'Logo sur les supports communication',
                     'Stand 3×2m (parquet, comptoir, table, 3 chaises)',
@@ -62,7 +62,7 @@ class SponsoringController extends Controller
                 'tier'    => 'Bronze',
                 'price'   => '60 000 DH HT',
                 'theme'   => 'bronze',
-                'medal'   => '🥉',
+                'medal'   => 'bronze-medal.png',
                 'avantages' => [
                     'Logo sur les supports communication',
                     'Stand 3×2m (parquet, comptoir, table, 3 chaises)',
@@ -74,10 +74,10 @@ class SponsoringController extends Controller
         ];
 
         $avantages_communs = [
-            ['icon' => '📢', 'titre' => 'Visibilité Communication', 'desc' => 'Logo sur tous les supports de communication de l\'événement'],
-            ['icon' => '📱', 'titre' => 'Réseaux Sociaux',          'desc' => 'Présence et mentions sur les réseaux sociaux ASMEX'],
-            ['icon' => '🎤', 'titre' => 'Participation Panels',     'desc' => 'Participation aux panels thématiques de l\'événement'],
-            ['icon' => '🏢', 'titre' => 'Stand 3×2m',               'desc' => 'Stand équipé : parquet, comptoir, table, 3 chaises, panneau 120×100cm'],
+            ['icon' => 'annonce.png',          'titre' => 'Visibilité Communication', 'desc' => 'Logo sur tous les supports de communication de l\'événement'],
+            ['icon' => 'des-medias-sociaux.png','titre' => 'Réseaux Sociaux',          'desc' => 'Présence et mentions sur les réseaux sociaux ASMEX'],
+            ['icon' => 'participation.png',     'titre' => 'Participation Panels',     'desc' => 'Participation aux panels thématiques de l\'événement'],
+            ['icon' => 'trade.png',             'titre' => 'Stand 3×2m',               'desc' => 'Stand équipé : parquet, comptoir, table, 3 chaises, panneau 120×100cm'],
         ];
 
         $stand_specs = [

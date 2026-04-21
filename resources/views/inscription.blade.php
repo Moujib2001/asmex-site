@@ -223,28 +223,28 @@
                     <div class="info-card-dark info-card">
                         <h3 class="info-card-title">L'Événement</h3>
                         <div class="info-item">
-                            <span class="info-item-icon">📅</span>
+                            <img src="{{ asset('imges/icon/calendar-clock.png') }}" alt="Date" class="info-item-icon">
                             <div>
                                 <span class="info-item-label">Date</span>
                                 <span class="info-item-val">Jeudi 04 Juin 2026</span>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-item-icon">⏰</span>
+                            <img src="{{ asset('imges/icon/clock.png') }}" alt="Horaires" class="info-item-icon">
                             <div>
                                 <span class="info-item-label">Horaires</span>
                                 <span class="info-item-val">08h30 – 17h00</span>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-item-icon">📍</span>
+                            <img src="{{ asset('imges/icon/marker.png') }}" alt="Lieu" class="info-item-icon">
                             <div>
                                 <span class="info-item-label">Lieu</span>
                                 <span class="info-item-val">Four Seasons Hotel<br>Casablanca, Maroc</span>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-item-icon">👥</span>
+                            <img src="{{ asset('imges/icon/group.png') }}" alt="Participants" class="info-item-icon">
                             <div>
                                 <span class="info-item-label">Participants</span>
                                 <span class="info-item-val">200–300 attendus</span>
@@ -296,14 +296,14 @@
                     <div class="info-card">
                         <h3 class="info-card-title">Contact</h3>
                         <div class="info-item">
-                            <span class="info-item-icon">👩‍💼</span>
+                            <img src="{{ asset('imges/icon/responsible.png') }}" alt="Responsable" class="info-item-icone">
                             <div>
                                 <span class="info-item-label">Responsable</span>
                                 <span class="info-item-val">Mme Hind LAHSINIA</span>
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-item-icon">📞</span>
+                            <img src="{{ asset('imges/icon/telephone.png') }}" alt="Téléphone" class="info-item-icone">
                             <div>
                                 <span class="info-item-label">Téléphone</span>
                                 <span class="info-item-val">
@@ -312,7 +312,7 @@
                             </div>
                         </div>
                         <div class="info-item">
-                            <span class="info-item-icon">✉️</span>
+                            <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="info-item-icone">
                             <div>
                                 <span class="info-item-label">Email</span>
                                 <span class="info-item-val">

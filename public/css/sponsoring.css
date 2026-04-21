@@ -72,9 +72,15 @@
 }
 
 .avantage-icon {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin: 0 auto 16px;
   display: block;
+}
+
+.avantage-icon[alt="Stand 3×2m"] {
+  filter: invert(23%) sepia(91%) saturate(2000%) hue-rotate(340deg) brightness(95%) contrast(95%);
 }
 
 .avantage-title {
@@ -146,9 +152,11 @@
 }
 
 .package-medal {
-  font-size: 2.8rem;
-  line-height: 1;
-  margin-bottom: 4px;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  display: block;
 }
 
 .package-tier {

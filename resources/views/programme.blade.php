@@ -20,15 +20,15 @@
             </p>
             <div class="page-hero-meta">
                 <div class="page-hero-meta-item">
-                    <span>📅</span>
+                    <img src="{{ asset('imges/icon/calendar-clock.png') }}" alt="Date" class="page-hero-meta-icon">
                     <span><strong>Jeudi 04 Juin 2026</strong></span>
                 </div>
                 <div class="page-hero-meta-item">
-                    <span>⏰</span>
+                    <img src="{{ asset('imges/icon/clock.png') }}" alt="Horaires" class="page-hero-meta-icon">
                     <span><strong>08h30 – 17h00</strong></span>
                 </div>
                 <div class="page-hero-meta-item">
-                    <span>📍</span>
+                    <img src="{{ asset('imges/icon/marker.png') }}" alt="Lieu" class="page-hero-meta-icon">
                     <span><strong>Four Seasons Hotel</strong>, Casablanca</span>
                 </div>
             </div>

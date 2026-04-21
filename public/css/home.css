@@ -5,12 +5,23 @@
    ============================================================ */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--bleu-dark) 0%, var(--bleu) 50%, var(--bleu-mid) 100%);
+  background: none;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: var(--navbar-h);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(15,28,77,0.82) 0%, rgba(27,43,107,0.75) 50%, rgba(36,53,128,0.80) 100%),
+    url('../imges/affix.jpeg') center top / cover no-repeat;
+  transform: scaleX(-1);
+  z-index: 0;
 }
 
 .hero-grid-bg {
@@ -113,26 +124,115 @@
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 12px;
+  margin-bottom: 32px;
   animation: fadeInUp 0.9s cubic-bezier(0.4,0,0.2,1) 0.3s both;
 }
 
-.hero-meta-item {
+.hero-meta-card {
+  /* display: flex; */
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+.hero-meta-card:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(0,174,239,0.4);
+}
+
+.hero-meta-card-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+
+}
+
+.hero-meta-card label,
+.hero-meta-card-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2px;
+}
+
+.hero-meta-card-val {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--blanc);
+  letter-spacing: 0.01em;
+}
+
+/* ---- COUNTDOWN ---- */
+.hero-countdown {
+  margin-bottom: 40px;
+  animation: fadeInUp 0.9s cubic-bezier(0.4,0,0.2,1) 0.35s both;
+}
+
+.hero-countdown-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
+}
+
+.hero-countdown-blocks {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.75);
+  gap: 8px;
 }
 
-.hero-meta-icon {
-  font-size: 1.1rem;
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  min-width: 72px;
+  backdrop-filter: blur(8px);
 }
 
-.hero-meta-item strong {
-  color: var(--blanc);
+.countdown-num {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--cyan);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit {
+  font-size: 0.65rem;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 4px;
+}
+
+.countdown-sep {
+  font-family: var(--font-titre);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: rgba(255,255,255,0.25);
+  line-height: 1;
+  margin-bottom: 16px;
 }
 
 .hero-actions {
@@ -178,7 +278,7 @@
 
 .partenaires-label {
   text-align: center;
-  font-size: 0.78rem;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -199,8 +299,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
-  filter: grayscale(1);
+
   transition: var(--transition);
 }
 
@@ -210,7 +309,7 @@
 }
 
 .partenaire-logo-wrap img {
-  height: 52px;
+  height: 7rem;
   width: auto;
   object-fit: contain;
 }
@@ -351,7 +450,9 @@
 }
 
 .panel-card-icon {
-  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
   margin-bottom: 16px;
   display: block;
 }
@@ -415,14 +516,20 @@
 }
 
 .pourquoi-icon {
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
   flex-shrink: 0;
+  padding: 12px;
+}
+
+.pourquoi-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .pourquoi-icon.bleu   { background: rgba(27,43,107,0.08); }
@@ -548,6 +655,27 @@
 @media (max-width: 600px) {
   .chiffres-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-meta {
+    gap: 8px;
+  }
+
+  .hero-meta-card {
+    padding: 10px 14px;
+  }
+
+  .hero-countdown-blocks {
+    gap: 6px;
+  }
+
+  .countdown-block {
+    min-width: 58px;
+    padding: 10px 12px;
+  }
+
+  .countdown-num {
+    font-size: 1.4rem;
   }
 
   .hero-actions {

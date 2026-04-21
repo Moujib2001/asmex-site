@@ -1,6 +1,40 @@
 // public/js/home.js
 
 // ============================================================
+// COUNTDOWN TIMER — 04 Juin 2026 08h30
+// ============================================================
+(function () {
+    var target = new Date('2026-06-04T08:30:00').getTime();
+
+    var elJours    = document.getElementById('cd-jours');
+    var elHeures   = document.getElementById('cd-heures');
+    var elMinutes  = document.getElementById('cd-minutes');
+    var elSecondes = document.getElementById('cd-secondes');
+
+    if (!elJours) return;
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function tick() {
+        var now  = new Date().getTime();
+        var diff = target - now;
+
+        if (diff <= 0) {
+            elJours.textContent = elHeures.textContent = elMinutes.textContent = elSecondes.textContent = '00';
+            return;
+        }
+
+        elJours.textContent    = pad(Math.floor(diff / (1000 * 60 * 60 * 24)));
+        elHeures.textContent   = pad(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        elMinutes.textContent  = pad(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+        elSecondes.textContent = pad(Math.floor((diff % (1000 * 60)) / 1000));
+    }
+
+    tick();
+    setInterval(tick, 1000);
+})();
+
+// ============================================================
 // COUNTER ANIMÉ
 // ============================================================
 (function () {

@@ -35,7 +35,7 @@
             <div class="avantages-grid">
                 @foreach($avantages_communs as $av)
                     <div class="avantage-card reveal reveal-delay-{{ $loop->index + 1 }}">
-                        <span class="avantage-icon">{{ $av['icon'] }}</span>
+                        <img src="{{ asset('imges/icon/' . $av['icon']) }}" alt="{{ $av['titre'] }}" class="avantage-icon">
                         <h3 class="avantage-title">{{ $av['titre'] }}</h3>
                         <p class="avantage-desc">{{ $av['desc'] }}</p>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="package-card package-{{ strtolower($package['tier']) }} reveal">
                         {{-- Gauche --}}
                         <div class="package-left">
-                            <div class="package-medal">{{ $package['medal'] }}</div>
+                            <img src="{{ asset('imges/icon/' . $package['medal']) }}" alt="{{ $package['tier'] }}" class="package-medal">
                             <div class="package-tier">Package</div>
                             <div class="package-name">{{ $package['tier'] }}</div>
                             <div class="package-price">

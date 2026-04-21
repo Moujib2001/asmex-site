@@ -34,17 +34,58 @@
                 </p>
 
                 <div class="hero-meta">
-                    <div class="hero-meta-item">
-                        <span class="hero-meta-icon">📅</span>
-                        <span><strong>04 Juin 2026</strong> — 08h30 à 17h00</span>
+                    <div class="hero-meta-card">
+                        <img src="{{ asset('imges/icon/calendar-clock.png') }}" alt="Date" class="hero-meta-card-icon">
+                        <div>
+                            <span class="hero-meta-card-label">Date</span>
+                            <span class="hero-meta-card-val">04 Juin 2026</span>
+                        </div>
                     </div>
-                    <div class="hero-meta-item">
-                        <span class="hero-meta-icon">📍</span>
-                        <span><strong>Four Seasons Hotel</strong>, Casablanca</span>
+                    <div class="hero-meta-card">
+                        <img src="{{ asset('imges/icon/clock.png') }}" alt="Horaires" class="hero-meta-card-icon">
+                        <div>
+                            <span class="hero-meta-card-label">Horaires</span>
+                            <span class="hero-meta-card-val">08h30 – 17h00</span>
+                        </div>
                     </div>
-                    <div class="hero-meta-item">
-                        <span class="hero-meta-icon">🏛️</span>
-                        <span>Organisé par <strong>ASMEX</strong></span>
+                    <div class="hero-meta-card">
+                        <img src="{{ asset('imges/icon/marker.png') }}" alt="Lieu" class="hero-meta-card-icon">
+                        <div>
+                            <span class="hero-meta-card-label">Lieu</span>
+                            <span class="hero-meta-card-val">Four Seasons, Casablanca</span>
+                        </div>
+                    </div>
+                    <div class="hero-meta-card">
+                        <img src="{{ asset('imges/icon/group.png') }}" alt="Participants" class="hero-meta-card-icon">
+                        <div>
+                            <span class="hero-meta-card-label">Participants</span>
+                            <span class="hero-meta-card-val">200 – 300</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-countdown">
+                    <span class="hero-countdown-label">L'événement commence dans</span>
+                    <div class="hero-countdown-blocks">
+                        <div class="countdown-block">
+                            <span class="countdown-num" id="cd-jours">00</span>
+                            <span class="countdown-unit">Jours</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-block">
+                            <span class="countdown-num" id="cd-heures">00</span>
+                            <span class="countdown-unit">Heures</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-block">
+                            <span class="countdown-num" id="cd-minutes">00</span>
+                            <span class="countdown-unit">Minutes</span>
+                        </div>
+                        <span class="countdown-sep">:</span>
+                        <div class="countdown-block">
+                            <span class="countdown-num" id="cd-secondes">00</span>
+                            <span class="countdown-unit">Secondes</span>
+                        </div>
                     </div>
                 </div>
 
@@ -70,13 +111,14 @@
     ============================================================ --}}
     <section class="section-partenaires">
         <div class="container">
-            <p class="partenaires-label">Organisateurs & Partenaires</p>
+            <p class="partenaires-label">Partenaires</p>
             <div class="partenaires-logos">
-                @foreach($partenaires as $p)
-                    <div class="partenaire-logo-wrap">
-                        <span class="partenaire-name-fallback">{{ $p['nom'] }}</span>
-                    </div>
-                @endforeach
+                <div class="partenaire-logo-wrap">
+                    <img src="{{ asset('imges/Partenaires/PORTNET.jpeg') }}" alt="PORTNET">
+                </div>
+                <div class="partenaire-logo-wrap">
+                    <img src="{{ asset('imges/Partenaires/APEBI.png') }}" alt="APEBI">
+                </div>
             </div>
         </div>
     </section>
@@ -117,7 +159,7 @@
                 @foreach($panels as $panel)
                     <div class="panel-card reveal reveal-delay-{{ $loop->index + 1 }}">
                         <div class="panel-card-number">{{ $panel['numero'] }}</div>
-                        <span class="panel-card-icon">{{ $panel['icon'] }}</span>
+                        <img src="{{ asset('imges/icon/' . $panel['icon']) }}" alt="{{ $panel['titre'] }}" class="panel-card-icon">
                         <span class="panel-card-heure">{{ $panel['heure'] }}</span>
                         <h3 class="panel-card-title">{{ $panel['titre'] }}</h3>
                         <p class="panel-card-desc">{{ $panel['desc'] }}</p>
@@ -142,7 +184,9 @@
 
             <div class="pourquoi-grid">
                 <div class="pourquoi-card reveal">
-                    <div class="pourquoi-icon bleu">🧠</div>
+                    <div class="pourquoi-icon bleu">
+                        <img src="{{ asset('imges/icon/brain.png') }}" alt="IA">
+                    </div>
                     <div>
                         <h3 class="pourquoi-content-title">Expertise IA de Pointe</h3>
                         <p class="pourquoi-content-desc">
@@ -152,7 +196,9 @@
                 </div>
 
                 <div class="pourquoi-card reveal reveal-delay-1">
-                    <div class="pourquoi-icon rouge">🤝</div>
+                    <div class="pourquoi-icon rouge">
+                        <img src="{{ asset('imges/icon/expertise.png') }}" alt="Networking">
+                    </div>
                     <div>
                         <h3 class="pourquoi-content-title">Networking de Qualité</h3>
                         <p class="pourquoi-content-desc">
@@ -162,7 +208,9 @@
                 </div>
 
                 <div class="pourquoi-card reveal reveal-delay-2">
-                    <div class="pourquoi-icon cyan">💡</div>
+                    <div class="pourquoi-icon cyan">
+                        <img src="{{ asset('imges/icon/solution.png') }}" alt="Solutions">
+                    </div>
                     <div>
                         <h3 class="pourquoi-content-title">Solutions Concrètes</h3>
                         <p class="pourquoi-content-desc">
@@ -172,7 +220,9 @@
                 </div>
 
                 <div class="pourquoi-card reveal reveal-delay-3">
-                    <div class="pourquoi-icon green">📊</div>
+                    <div class="pourquoi-icon green">
+                        <img src="{{ asset('imges/icon/pie-chart.png') }}" alt="Recommandations">
+                    </div>
                     <div>
                         <h3 class="pourquoi-content-title">Recommandations Officielles</h3>
                         <p class="pourquoi-content-desc">
