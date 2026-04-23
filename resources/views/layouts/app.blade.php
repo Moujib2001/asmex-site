@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="L'Export Digital à l'Ère de l'Intelligence Artificielle – ASMEX, 04 Juin 2026, Four Seasons Hotel Casablanca">
+    <meta name="description" content="L'Export à l'Ère du Digital et de l'Intelligence Artificielle – ASMEX, 04 Juin 2026, Four Seasons Hotel Casablanca">
     <meta name="theme-color" content="#1B2B6B">
 
-    <title>@yield('title', 'ASMEX – Export Digital & IA 2026')</title>
+    <title>@yield('title', 'ASMEX – L\'Export à l\'Ère du Digital et de l\'Intelligence Artificielle 2026')</title>
 
     {{-- Montserrat local --}}
 

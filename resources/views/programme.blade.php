@@ -1,7 +1,7 @@
 {{-- resources/views/programme.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Programme – ASMEX Export Digital & IA 2026')
+@section('title', 'Programme – ASMEX Export à l\'Ère du Digital & IA 2026')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/programme.css') }}">

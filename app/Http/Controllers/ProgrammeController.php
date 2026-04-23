@@ -45,7 +45,7 @@ class ProgrammeController extends Controller
                 'desc'       => 'Comment l\'intelligence artificielle transforme les stratégies d\'exportation',
                 'type'       => 'panel',
                 'speakers'   => [
-                    ['nom' => 'Rédouane EL HALOUI',  'titre' => 'Président, APEBI'],
+                    ['nom' => 'Rédouane EL HALOUI',  'titre' => 'Président, APEPI'],
                     ['nom' => 'Zouheir LAKHDISSI',   'titre' => 'Expert Digital & IA'],
                     ['nom' => 'Amine MEZOUAGHI',      'titre' => 'DG, Agence ADD'],
                     ['nom' => 'Oussra EL HATIB',      'titre' => 'Oracle R&D | Présidente Commission IA APEBI'],

@@ -1,7 +1,7 @@
 {{-- resources/views/intervenants.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Intervenants – ASMEX Export Digital & IA 2026')
+@section('title', 'Intervenants – ASMEX Export à l\'Ère du Digital & IA 2026')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/intervenants.css') }}">

@@ -7,7 +7,7 @@
                 <img src="{{ asset('imges/logo/Logo_Asmex_blanc.png') }}" alt="ASMEX" class="footer-logo-img">
                 <p class="footer-brand-desc">
                     Confédération Marocaine des Exportateurs.<br>
-                    Événement : L'Export Digital à l'Ère de l'IA — 04 Juin 2026, Casablanca.
+                    Événement : L'Export à l'Ère du Digital et de l'IA — 04 Juin 2026, Casablanca.
                 </p>
             </div>
 
@@ -66,7 +66,11 @@
         <div class="container">
             <div class="footer-bottom-inner">
                 <span>&copy; 2026 ASMEX – Confédération Marocaine des Exportateurs. Tous droits réservés.</span>
-                <span class="footer-partners">Partenaires : ASMEX · PORTNET · APEBI</span>
+                <div class="footer-partners">
+                    <span>Partenaires officiels :</span>
+                    <img src="{{ asset('imges/Partenaires/PORTNET.jpeg') }}" alt="PORTNET" class="footer-partner-logo">
+                    <img src="{{ asset('imges/Partenaires/APEBI.png') }}" alt="APEBI" class="footer-partner-logo">
+                </div>
             </div>
         </div>
     </div>

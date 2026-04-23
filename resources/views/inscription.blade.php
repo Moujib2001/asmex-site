@@ -1,7 +1,7 @@
 {{-- resources/views/inscription.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Inscription – ASMEX Export Digital & IA 2026')
+@section('title', 'Inscription – ASMEX Export à l\'Ère du Digital & IA 2026')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/inscription.css') }}">

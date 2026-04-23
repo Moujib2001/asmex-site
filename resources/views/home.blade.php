@@ -1,7 +1,7 @@
 {{-- resources/views/home.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'ASMEX – L\'Export Digital à l\'Ère de l\'IA – 04 Juin 2026, Casablanca')
+@section('title', 'ASMEX – L\'Export à l\'Ère du Digital et de l\'Intelligence Artificielle – 04 Juin 2026, Casablanca')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -25,8 +25,8 @@
                 </div>
 
                 <h1 class="hero-title">
-                    L'Export Digital<br>
-                    à l'Ère de <span>l'Intelligence<br>Artificielle</span>
+                    L'Export à l'Ère<br>
+                    du Digital et de <span>l'Intelligence<br>Artificielle</span>
                 </h1>
 
                 <p class="hero-subtitle">

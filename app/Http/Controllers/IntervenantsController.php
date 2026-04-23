@@ -65,7 +65,7 @@ class IntervenantsController extends Controller
                 'prenom'  => 'Rédouane',
                 'nom'     => 'EL HALOUI',
                 'titre'   => 'Président',
-                'org'     => 'APEBI',
+                'org'     => 'APEPI',
                 'panel'   => 'panel1',
                 'couleur' => 'cyan',
             ],

@@ -133,7 +133,22 @@
 .footer-partners {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-partner-logo {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s;
+}
+
+.footer-partner-logo:hover {
+    opacity: 1;
 }
 
 @media (max-width: 900px) {

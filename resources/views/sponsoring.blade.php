@@ -1,7 +1,7 @@
 {{-- resources/views/sponsoring.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Sponsoring – ASMEX Export Digital & IA 2026')
+@section('title', 'Sponsoring – ASMEX Export à l\'Ère du Digital & IA 2026')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/sponsoring.css') }}">
@@ -136,10 +136,10 @@
 
                     <div class="stand-contact-links">
                         <a href="tel:+212661324503" class="stand-contact-link">
-                            <span>📞</span> +212 6 61 32 45 03
+                            <img src="{{ asset('imges/icon/telephone.png') }}" alt="Téléphone" class="stand-contact-icon"> +212 6 61 32 45 03
                         </a>
                         <a href="mailto:h.lahsinia@asmex.org" class="stand-contact-link">
-                            <span>✉️</span> h.lahsinia@asmex.org
+                            <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="stand-contact-icon"> h.lahsinia@asmex.org
                         </a>
                     </div>
                 </div>

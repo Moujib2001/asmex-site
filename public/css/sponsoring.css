@@ -387,6 +387,15 @@
   color: var(--cyan);
 }
 
+.stand-contact-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */

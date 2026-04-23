@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nouvelle inscription – ASMEX Export Digital IA 2026</title>
+    <title>Nouvelle inscription – ASMEX Export à l'Ère du Digital et de l'IA 2026</title>
     <style>
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #F4F6FB; color: #4A5568; }
         .wrapper { max-width: 600px; margin: 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(27,43,107,0.1); }
@@ -29,7 +29,7 @@
         <div class="header">
             <span class="badge">Nouvelle inscription</span>
             <h1 class="header-title">🔔 Nouvelle Inscription reçue</h1>
-            <p class="header-sub">ASMEX – Export Digital à l'Ère de l'IA 2026</p>
+            <p class="header-sub">ASMEX – L'Export à l'Ère du Digital et de l'IA 2026</p>
         </div>
 
         <div class="body">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="footer-email">
-            Notification automatique – Site ASMEX Export Digital IA 2026<br>
+            Notification automatique – Site ASMEX Export à l'Ère du Digital et de l'IA 2026<br>
             Accessible via le back-office de l'événement
         </div>
     </div>

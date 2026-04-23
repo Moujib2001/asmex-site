@@ -1,7 +1,7 @@
 {{-- resources/views/contact.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Contact – ASMEX Export Digital & IA 2026')
+@section('title', 'Contact – ASMEX Export à l\'Ère du Digital & IA 2026')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
@@ -37,15 +37,21 @@
 
                         <div class="contact-links">
                             <a href="tel:+212661324503" class="contact-link">
-                                <div class="contact-link-icon">📞</div>
+                                <div class="contact-link-icon">
+                                    <img src="{{ asset('imges/icon/telephone.png') }}" alt="Téléphone" class="contact-link-img">
+                                </div>
                                 <span>+212 6 61 32 45 03</span>
                             </a>
                             <a href="mailto:h.lahsinia@asmex.org" class="contact-link">
-                                <div class="contact-link-icon">✉️</div>
+                                <div class="contact-link-icon">
+                                    <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="contact-link-img">
+                                </div>
                                 <span>h.lahsinia@asmex.org</span>
                             </a>
                             <div class="contact-link">
-                                <div class="contact-link-icon">🏛️</div>
+                                <div class="contact-link-icon">
+                                    <img src="{{ asset('imges/icon/layer.png') }}" alt="Organisation" class="contact-link-img">
+                                </div>
                                 <span>ASMEX – Confédération Marocaine des Exportateurs</span>
                             </div>
                         </div>

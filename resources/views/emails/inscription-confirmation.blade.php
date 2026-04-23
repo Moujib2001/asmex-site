@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation d'inscription – ASMEX Export Digital IA 2026</title>
+    <title>Confirmation d'inscription – ASMEX Export à l'Ère du Digital et de l'IA 2026</title>
     <style>
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #F4F6FB; color: #4A5568; }
         .wrapper { max-width: 600px; margin: 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(27,43,107,0.1); }
@@ -34,13 +34,13 @@
         <div class="header">
             <span class="header-icon">✅</span>
             <h1 class="header-title">Inscription Confirmée</h1>
-            <p class="header-sub">L'Export Digital à l'Ère de l'Intelligence Artificielle</p>
+            <p class="header-sub">L'Export à l'Ère du Digital et de l'Intelligence Artificielle</p>
         </div>
 
         <div class="body">
             <p class="greeting">Bonjour {{ $inscription->prenom }} {{ $inscription->nom }},</p>
             <p class="text">
-                Nous avons bien reçu votre inscription à l'événement <strong>« L'Export Digital à l'Ère de l'Intelligence Artificielle »</strong> organisé par ASMEX.
+                Nous avons bien reçu votre inscription à l'événement <strong>« L'Export à l'Ère du Digital et de l'Intelligence Artificielle »</strong> organisé par ASMEX.
                 Votre participation est confirmée et nous sommes ravis de vous compter parmi nous.
             </p>
 
