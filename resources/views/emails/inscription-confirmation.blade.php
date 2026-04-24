@@ -23,7 +23,7 @@
         .event-block { background: linear-gradient(135deg, #1B2B6B 0%, #243580 100%); border-radius: 10px; padding: 24px 28px; margin: 24px 0; }
         .event-block-title { font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 16px; }
         .event-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 0.85rem; color: rgba(255,255,255,0.8); }
-        .event-icon { font-size: 1rem; flex-shrink: 0; }
+        .event-icon { width: 18px; height: 18px; flex-shrink: 0; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.85; margin-top: 1px; }
         .cta-btn { display: block; width: fit-content; margin: 24px auto; background: #E63329; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 0.95rem; text-align: center; }
         .footer-email { background: #F4F6FB; padding: 24px 40px; text-align: center; font-size: 0.78rem; color: #a0aec0; border-top: 1px solid rgba(27,43,107,0.06); }
         .footer-email a { color: #1B2B6B; }
@@ -58,10 +58,10 @@
 
             <div class="event-block">
                 <p class="event-block-title">Informations sur l'événement</p>
-                <div class="event-item"><span class="event-icon">📅</span><span>Jeudi 04 Juin 2026</span></div>
-                <div class="event-item"><span class="event-icon">⏰</span><span>08h30 – 17h00</span></div>
-                <div class="event-item"><span class="event-icon">📍</span><span>Four Seasons Hotel, Casablanca</span></div>
-                <div class="event-item"><span class="event-icon">👥</span><span>200–300 participants attendus</span></div>
+                <div class="event-item"><img src="{{ config('app.url') }}/imges/icon/calendar-clock.png" alt="Date" class="event-icon"><span>Jeudi 04 Juin 2026</span></div>
+                <div class="event-item"><img src="{{ config('app.url') }}/imges/icon/clock.png" alt="Horaires" class="event-icon"><span>08h30 – 17h00</span></div>
+                <div class="event-item"><img src="{{ config('app.url') }}/imges/icon/marker.png" alt="Lieu" class="event-icon"><span>Four Seasons Hotel, Casablanca</span></div>
+                <div class="event-item"><img src="{{ config('app.url') }}/imges/icon/group.png" alt="Participants" class="event-icon"><span>200–300 participants attendus</span></div>
             </div>
 
             <p class="text">

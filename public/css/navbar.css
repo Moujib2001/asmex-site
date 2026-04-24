@@ -90,32 +90,43 @@
 .navbar-burger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
     padding: 8px;
     cursor: pointer;
-    background: none;
-    border: none;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.navbar-burger:hover {
+    background: rgba(255,255,255,0.16);
 }
 
 .navbar-burger span {
     display: block;
-    width: 24px;
+    width: 100%;
     height: 2px;
     background: var(--blanc);
     border-radius: 2px;
-    transition: var(--transition);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
 }
 
 .navbar-burger.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
 }
 
 .navbar-burger.open span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
 }
 
 .navbar-burger.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 @media (max-width: 900px) {
@@ -125,27 +136,42 @@
         top: var(--navbar-h);
         left: 0;
         right: 0;
+        bottom: 0;
         background: var(--bleu);
         flex-direction: column;
         align-items: stretch;
-        padding: 16px 24px 24px;
+        padding: 20px 24px 32px;
         gap: 4px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        z-index: 999;
     }
 
     #navLinks.open {
         display: flex;
     }
 
+    #navLinks li {
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    #navLinks li:last-child {
+        border-bottom: none;
+        margin-top: 12px;
+    }
+
     .nav-link {
-        padding: 12px 16px;
-        font-size: 1rem;
+        padding: 14px 16px;
+        font-size: 1.05rem;
+        display: block;
+        border-radius: var(--radius-sm);
     }
 
     .nav-cta {
         margin-left: 0;
         text-align: center;
-        margin-top: 8px;
+        padding: 14px 20px;
+        font-size: 1rem;
     }
 
     .navbar-burger {

@@ -26,6 +26,7 @@ class InscriptionController extends Controller
             'societe'   => 'required|string|max:200',
             'fonction'  => 'required|string|max:200',
             'type'      => 'required|in:Participant,Sponsor,Presse,Intervenant',
+            'package'   => 'nullable|in:Platinum,Gold,Silver,Bronze',
             'message'   => 'nullable|string|max:1000',
             'rgpd'      => 'required|accepted',
         ]);

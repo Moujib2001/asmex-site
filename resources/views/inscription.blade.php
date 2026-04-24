@@ -72,6 +72,26 @@
                             @enderror
                         </div>
 
+                        {{-- Package Sponsor (visible uniquement si type = Sponsor) --}}
+                        <div class="form-group form-group-sponsor" id="sponsor-package-group" style="margin-bottom:28px;display:none;">
+                            <label for="package">Package de sponsoring <span style="color:var(--rouge)">*</span></label>
+                            <select
+                                id="package"
+                                name="package"
+                                class="form-control {{ $errors->has('package') ? 'is-invalid' : '' }}"
+                            >
+                                <option value="">— Choisissez un package —</option>
+                                @foreach(['Platinum' => '200 000 DH HT', 'Gold' => '160 000 DH HT', 'Silver' => '120 000 DH HT', 'Bronze' => '60 000 DH HT'] as $pkg => $prix)
+                                    <option value="{{ $pkg }}" {{ old('package', request('package')) === $pkg ? 'selected' : '' }}>
+                                        {{ $pkg }} — {{ $prix }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('package')
+                                <span class="invalid-feedback" style="display:block;">{{ $message }}</span>
+                            @enderror
+                        </div>
+
                         <div class="form-grid">
                             {{-- Prénom --}}
                             <div class="form-group">
@@ -200,8 +220,8 @@
                                         required
                                     >
                                     <label for="rgpd">
-                                        J'accepte que mes données soient utilisées dans le cadre de l'organisation de cet événement ASMEX.
-                                        <a href="{{ route('contact') }}">Politique de confidentialité</a>
+                                        J'accepte que mes données personnelles (nom, email, société, fonction) soient collectées et traitées par ASMEX – Confédération Marocaine des Exportateurs, dans le seul cadre de l'organisation et du suivi de l'événement <strong>« L'Export à l'Ère du Digital et de l'Intelligence Artificielle »</strong> — 04 Juin 2026, Four Seasons Hotel Casablanca. Ces données ne seront ni revendues, ni transmises à des tiers sans votre consentement explicite.
+                                        <a href="{{ route('contact') }}">En savoir plus</a>
                                     </label>
                                 </div>
                                 @error('rgpd')
@@ -331,4 +351,23 @@
 
 @push('scripts')
     <script src="{{ asset('js/inscription.js') }}" defer></script>
+    <script>
+        (function () {
+            var group   = document.getElementById('sponsor-package-group');
+            var select  = document.getElementById('package');
+            var radios  = document.querySelectorAll('input[name="type"]');
+
+            function toggle() {
+                var checked = document.querySelector('input[name="type"]:checked');
+                var isSponsor = checked && checked.value === 'Sponsor';
+                group.style.display = isSponsor ? 'block' : 'none';
+                if (!isSponsor) select.value = '';
+            }
+
+            radios.forEach(function (r) { r.addEventListener('change', toggle); });
+
+            // Init on page load (pour old('type') ou request('type'))
+            toggle();
+        })();
+    </script>
 @endpush

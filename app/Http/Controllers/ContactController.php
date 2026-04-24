@@ -3,6 +3,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactConfirmation;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -22,7 +24,13 @@ class ContactController extends Controller
             'message' => 'required|string|max:2000',
         ]);
 
+        $contact = Contact::create($validated);
+
         try {
+            // Email confirmation au visiteur
+            Mail::to($contact->email)->send(new ContactConfirmation($contact));
+
+            // Notification interne à ASMEX
             Mail::raw(
                 "Nom : {$validated['nom']}\nEmail : {$validated['email']}\nSujet : {$validated['sujet']}\n\nMessage :\n{$validated['message']}",
                 function ($mail) use ($validated) {
@@ -32,7 +40,7 @@ class ContactController extends Controller
                 }
             );
         } catch (\Exception $e) {
-            // Silently fail
+            // Silently fail — message saved to DB regardless
         }
 
         return redirect()->route('contact')->with(

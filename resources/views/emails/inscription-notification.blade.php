@@ -53,6 +53,12 @@
                         <td>Type</td>
                         <td><span class="type-badge">{{ $inscription->type }}</span></td>
                     </tr>
+                    @if($inscription->type === 'Sponsor' && $inscription->package)
+                    <tr>
+                        <td>Package</td>
+                        <td><span class="type-badge" style="background:rgba(27,43,107,0.12);color:#1B2B6B;">{{ $inscription->package }}</span></td>
+                    </tr>
+                    @endif
                     <tr><td>Message</td><td>{{ $inscription->message ?? '—' }}</td></tr>
                 </tbody>
             </table>

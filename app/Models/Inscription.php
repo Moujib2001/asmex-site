@@ -18,6 +18,7 @@ class Inscription extends Model
         'societe',
         'fonction',
         'type',
+        'package',
         'message',
     ];
 
