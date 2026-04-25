@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Inscription – ASMEX Export à l\'Ère du Digital & IA 2026')
+@push('meta_description')Inscrivez-vous au forum ASMEX 2026 — L'Export à l'Ère du Digital et de l'IA. Places limitées. 04 Juin 2026, Four Seasons Hotel Casablanca.@endpush
+@push('meta_keywords')inscription ASMEX 2026, s'inscrire forum export, réservation événement Casablanca, forum IA Maroc@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/inscription.css') }}">
@@ -336,7 +338,7 @@
                             <div>
                                 <span class="info-item-label">Email</span>
                                 <span class="info-item-val">
-                                    <a href="mailto:h.lahsinia@asmex.org" style="color:var(--bleu);">h.lahsinia@asmex.org</a>
+                                    <a href="mailto:contact@digitalexportforum.ma" style="color:var(--bleu);">contact@digitalexportforum.ma</a>
                                 </span>
                             </div>
                         </div>

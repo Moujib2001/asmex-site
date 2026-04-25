@@ -34,7 +34,7 @@ class ContactController extends Controller
             Mail::raw(
                 "Nom : {$validated['nom']}\nEmail : {$validated['email']}\nSujet : {$validated['sujet']}\n\nMessage :\n{$validated['message']}",
                 function ($mail) use ($validated) {
-                    $mail->to('h.lahsinia@asmex.org')
+                    $mail->to('contact@digitalexportforum.ma')
                          ->subject('Contact site ASMEX – ' . $validated['sujet'])
                          ->replyTo($validated['email'], $validated['nom']);
                 }

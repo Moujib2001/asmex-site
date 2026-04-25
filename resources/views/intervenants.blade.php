@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Intervenants – ASMEX Export à l\'Ère du Digital & IA 2026')
+@push('meta_description')Découvrez les intervenants du forum ASMEX 2026 : experts IA, dirigeants, représentants institutionnels et innovateurs de l'export marocain.@endpush
+@push('meta_keywords')intervenants ASMEX, experts IA, export Maroc, speakers forum 2026, APEBI, PORTNET, AMDIE@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/intervenants.css') }}">

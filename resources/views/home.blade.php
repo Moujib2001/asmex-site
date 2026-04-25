@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'ASMEX – L\'Export à l\'Ère du Digital et de l\'Intelligence Artificielle – 04 Juin 2026, Casablanca')
+@push('meta_description')Rejoignez 200 à 300 décideurs et experts le 04 Juin 2026 au Four Seasons Hotel Casablanca pour le forum ASMEX sur l'export digital et l'intelligence artificielle.@endpush
+@push('meta_keywords')ASMEX, export digital, intelligence artificielle, IA, forum Maroc, Casablanca 2026, Four Seasons, décideurs, exportateurs marocains@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">

@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Sponsoring – ASMEX Export à l\'Ère du Digital & IA 2026')
+@push('meta_description')Devenez partenaire du forum ASMEX 2026. Packages Platinum, Gold, Silver, Bronze. Visibilité maximale face à 200–300 décideurs de l'export marocain.@endpush
+@push('meta_keywords')sponsoring ASMEX, partenaire forum export, sponsor IA Maroc, package sponsoring Casablanca 2026@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/sponsoring.css') }}">
@@ -138,8 +140,8 @@
                         <a href="tel:+212661324503" class="stand-contact-link">
                             <img src="{{ asset('imges/icon/telephone.png') }}" alt="Téléphone" class="stand-contact-icon"> +212 6 61 32 45 03
                         </a>
-                        <a href="mailto:h.lahsinia@asmex.org" class="stand-contact-link">
-                            <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="stand-contact-icon"> h.lahsinia@asmex.org
+                        <a href="mailto:contact@digitalexportforum.ma" class="stand-contact-link">
+                            <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="stand-contact-icon"> contact@digitalexportforum.ma
                         </a>
                     </div>
                 </div>

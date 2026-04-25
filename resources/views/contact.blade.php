@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Contact – ASMEX Export à l\'Ère du Digital & IA 2026')
+@push('meta_description')Contactez l'équipe ASMEX pour toute question sur le forum Export Digital & IA 2026 : informations, partenariats, accréditations presse.@endpush
+@push('meta_keywords')contact ASMEX, forum export digital, renseignements événement Casablanca, partenariat ASMEX 2026@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
@@ -42,11 +44,11 @@
                                 </div>
                                 <span>+212 6 61 32 45 03</span>
                             </a>
-                            <a href="mailto:h.lahsinia@asmex.org" class="contact-link">
+                            <a href="mailto:contact@digitalexportforum.ma" class="contact-link">
                                 <div class="contact-link-icon">
                                     <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="contact-link-img">
                                 </div>
-                                <span>h.lahsinia@asmex.org</span>
+                                <span>contact@digitalexportforum.ma</span>
                             </a>
                             <div class="contact-link">
                                 <div class="contact-link-icon">

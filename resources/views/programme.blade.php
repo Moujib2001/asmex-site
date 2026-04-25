@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 @section('title', 'Programme – ASMEX Export à l\'Ère du Digital & IA 2026')
+@push('meta_description')Découvrez le programme complet du forum ASMEX 2026 : keynotes, panels IA & export, use cases, networking. 04 Juin 2026, Four Seasons Hotel Casablanca.@endpush
+@push('meta_keywords')programme ASMEX 2026, panels IA, export digital, keynote, networking, Four Seasons Casablanca@endpush
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/programme.css') }}">

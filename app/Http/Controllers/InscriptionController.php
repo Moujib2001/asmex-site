@@ -35,7 +35,7 @@ class InscriptionController extends Controller
 
         try {
             Mail::to($inscription->email)->send(new InscriptionConfirmation($inscription));
-            Mail::to('h.lahsinia@asmex.org')->send(new InscriptionNotification($inscription));
+            Mail::to('contact@digitalexportforum.ma')->send(new InscriptionNotification($inscription));
         } catch (\Exception $e) {
             // Silently fail on mail errors — inscription is saved regardless
         }

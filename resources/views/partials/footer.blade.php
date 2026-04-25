@@ -53,8 +53,8 @@
                     <a href="tel:+212661324503" class="footer-contact-link">
                         <img src="{{ asset('imges/icon/telephone.png') }}" alt="Téléphone" class="footer-info-icon"> +212 6 61 32 45 03
                     </a>
-                    <a href="mailto:h.lahsinia@asmex.org" class="footer-contact-link">
-                        <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="footer-info-icon"> h.lahsinia@asmex.org
+                    <a href="mailto:contact@digitalexportforum.ma" class="footer-contact-link">
+                        <img src="{{ asset('imges/icon/email.png') }}" alt="Email" class="footer-info-icon"> contact@digitalexportforum.ma
                     </a>
                 </div>
             </div>

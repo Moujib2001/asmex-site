@@ -52,7 +52,7 @@
 
             <p class="text">
                 Pour toute urgence, vous pouvez contacter directement notre équipe :<br>
-                <strong>Mme Hind LAHSINIA</strong> — <a href="tel:+212661324503">+212 6 61 32 45 03</a> — <a href="mailto:h.lahsinia@asmex.org">h.lahsinia@asmex.org</a>
+                <strong>Mme Hind LAHSINIA</strong> — <a href="tel:+212661324503">+212 6 61 32 45 03</a> — <a href="mailto:contact@digitalexportforum.ma">contact@digitalexportforum.ma</a>
             </p>
 
             <p class="text"><strong>L'équipe ASMEX</strong></p>
@@ -61,7 +61,7 @@
         <div class="footer-email">
             ASMEX – Confédération Marocaine des Exportateurs<br>
             Cet email est automatique, merci de ne pas y répondre directement.<br>
-            Contact : <a href="mailto:h.lahsinia@asmex.org">h.lahsinia@asmex.org</a>
+            Contact : <a href="mailto:contact@digitalexportforum.ma">contact@digitalexportforum.ma</a>
         </div>
     </div>
 </body>
